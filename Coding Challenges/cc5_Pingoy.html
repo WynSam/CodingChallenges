@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames(){
+		var name1 = prompt("Enter your name:");
+		var name2 = prompt("Enter your crush's name:");
+		var names = "Your name: " + name1 +"<br>"+ "Crush Name: " + name2;
+		document.getElementById("name").innerHTML=names;
+		var n1 = name1.trim().length;
+		var n2 = name2.trim().length;
+		var tot = n1+n2;
+		var flame = tot%6;
+		if(flame == 1){
+			document.getElementById("result").innerHTML= "Friends";
+		}
+		else if(flame == 2){
+			document.getElementById("result").innerHTML= "Lovers";
+		}
+		else if(flame == 3){
+			document.getElementById("result").innerHTML= "Acquaintances";
+		}
+		else if(flame == 4){
+			document.getElementById("result").innerHTML= "Marriage";
+		}
+		else if(flame == 5){
+			document.getElementById("result").innerHTML= "Enemies";
+		}
+		else{
+			document.getElementById("result").innerHTML="Sweethearts";
+		}
+            }
+        </script>
+    </body>
+</html>
